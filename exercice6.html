@@ -6,43 +6,21 @@
   </head>
   <body>
     <div class="conteneur">
-      <img src="image1.jpg" id="image1"/>
-      <img src="image2.jpg" id="image2"/>
-      <img src="image3.jpg" id="image3"/>
-      <img src="image4.jpg" id="image4"/>
-      <img src="image5.jpg" id="image5"/>
+      <img src="image1.jpg" onmouseover="overImage(this);" onmouseout="outImage(this);"id="image1"/>
+      <img src="image2.jpg" onmouseover="overImage(this);" onmouseout="outImage(this);"id="image2"/>
+      <img src="image3.jpg" onmouseover="overImage(this);" onmouseout="outImage(this);"id="image3"/>
+      <img src="image4.jpg" onmouseover="overImage(this);" onmouseout="outImage(this);"id="image4"/>
+      <img src="image5.jpg" onmouseover="overImage(this);" onmouseout="outImage(this);"id="image5"/>
     </div>
     <script>
-      var switch1 = document.getElementById('image1').addEventListener('mouseover', function() {
-        document.getElementById('image1').src = "image1_2.jpg";
-      })
-      var switch2 = document.getElementById('image1').addEventListener('mouseout', function() {
-        document.getElementById('image1').src = "image1.jpg";
-      })
-      var switch3 = document.getElementById('image2').addEventListener('mouseover', function() {
-        document.getElementById('image2').src = "image2_2.jpg";
-      })
-      var switch4 = document.getElementById('image2').addEventListener('mouseout', function() {
-        document.getElementById('image2').src = "image2.jpg";
-      })
-      var switch5 = document.getElementById('image3').addEventListener('mouseover', function() {
-        document.getElementById('image3').src = "image3_2.jpg";
-      })
-      var switch6 = document.getElementById('image3').addEventListener('mouseout', function() {
-        document.getElementById('image3').src = "image3.jpg";
-      })
-      var switch7 = document.getElementById('image4').addEventListener('mouseover', function() {
-        document.getElementById('image4').src = "image4_2.jpg";
-      })
-      var switch8 = document.getElementById('image4').addEventListener('mouseout', function() {
-        document.getElementById('image4').src = "image4.jpg";
-      })
-      var switch9 = document.getElementById('image5').addEventListener('mouseover', function() {
-        document.getElementById('image5').src = "image5_2.jpg";
-      })
-      var switch10 = document.getElementById('image5').addEventListener('mouseout', function() {
-        document.getElementById('image5').src = "image5.jpg";
-      })
+     function overImage(image) {
+       //this permet de remplacer le getElementById(ID) que nous récupérons avec le paramètre image
+       image.src=image.id+'_2.jpg';
+     };
+     function outImage(image) {
+       //this permet de remplacer le getElementById(ID) que nous récupérons avec le paramètre image
+       image.src=image.id+'.jpg';
+     };
     </script>
   </body>
 </html>
